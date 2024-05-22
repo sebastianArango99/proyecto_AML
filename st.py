@@ -13,8 +13,10 @@ def preprocess_data(df):
     return df
 
 def main():
-    st.title("FARMU - Predicción de Cajas Para Equipo de Última Milla")
     st.image("logo.png", width=100)
+    
+    st.title("FARMU - Predicción de Cajas Para Equipo de Última Milla")
+    
     
     st.markdown("### Descargar plantilla CSV")
     with open("template2 - Sheet1.csv", "rb") as file:
