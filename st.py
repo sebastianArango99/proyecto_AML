@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
 
-def load_model(pickle_file):
-    with open(pickle_file, 'rb') as file:
-        model = pickle.load(file)
+def load_model(model_path):
+    model = joblib.load(model_path)
     return model
 
 def preprocess_data(df):
