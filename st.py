@@ -15,11 +15,11 @@ def main():
     st.title("FARMU - Predicción de Cajas Para Equipo de Última Milla")
     
     st.markdown("### Descargar plantilla CSV")
-    with open("template2.csv", "rb") as file:
+    with open("template2 - Sheet1.csv", "rb") as file:
         btn = st.download_button(
             label="Descargar plantilla",
             data=file,
-            file_name="template2.csv",
+            file_name="template2 - Sheet1.csv",
             mime="text/csv"
         )
     
