@@ -51,10 +51,10 @@ def main():
         
         # Plotting the predictions
         plt.figure(figsize=(10, 6))
-        plt.plot(predictions, marker='o')
+        plt.hist(predictions, bins=20, edgecolor='black')
         plt.title("Cantidad de pedidos por cada predicción")
-        plt.xlabel("Índice de Predicción")
-        plt.ylabel("Cantidad de Cajas")
+        plt.xlabel("Cantidad de Cajas")
+        plt.ylabel("Frecuencia")
         st.pyplot(plt)
 
 if __name__ == "__main__":
