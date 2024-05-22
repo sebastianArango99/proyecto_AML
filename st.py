@@ -30,7 +30,7 @@ def main():
         st.write("Muestra del archivo:")
         st.write(df.head())
         
-        model_file = 'path/to/your/random_forest_model.pkl'  # Update with the correct path
+        model_file = 'best_model_boxes.pkl'  # Update with the correct path
         model = load_model(model_file)
         
         df_processed = preprocess_data(df)
