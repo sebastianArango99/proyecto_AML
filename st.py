@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import joblib
+import matplotlib.pyplot as plt
 
 def load_model(model_path):
     model = joblib.load(model_path)
@@ -39,6 +40,19 @@ def main():
         
         st.write("Predicciones:")
         st.write(predictions)
+
+        total_boxes = sum(predictions)
+        
+        
+        st.write(f"Total de cajas: {total_boxes}")
+        
+        # Plotting the predictions
+        plt.figure(figsize=(10, 6))
+        plt.plot(predictions, marker='o')
+        plt.title("Cantidad de pedidos por cada predicción")
+        plt.xlabel("Índice de Predicción")
+        plt.ylabel("Cantidad de Cajas")
+        st.pyplot(plt)
 
 if __name__ == "__main__":
     main()
